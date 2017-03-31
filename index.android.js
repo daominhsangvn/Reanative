@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+import * as Expo from 'expo';
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -50,4 +50,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Reanative', () => Reanative);
+Expo.registerRootComponent(Reanative);
+//AppRegistry.registerComponent('Reanative', () => Reanative);
