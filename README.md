@@ -1,3 +1,13 @@
+# How to run
+1. `$ npm install`
+2. `$ npm install --save react-native-video react-native-gesture-password react-native-swipe-cards react-native-swiper fuzzy react-native-touch-id react-native-image-picker react-native-carousel`
+3. `$ react-native link`
+4. Open the XCode Project
+5. Open `Build Phases` tab
+6. Correct the `libRCTVideo.a` (Make sure the module was added to libraries via `Add files to '<project name>'`)
+7. Press Start in XCode
+
+
 # Reanative
 code with react native
 用react native 开发的练习app，集成有scrollTab, Video,TouchId,ImagePicker,Charts，下拉刷新等功能。
