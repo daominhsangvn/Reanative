@@ -3,7 +3,6 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-import * as Expo from 'expo';
 import React, { Component } from 'react';
 import {
   AppRegistry,Navigator,StyleSheet,
@@ -15,11 +14,11 @@ import Login from './comments/Login';
 import style from './service/styles'
 import Routes from './service/Routes'
 
-const styles=style.styles;
+const styles=style.styles
 
 export default class Reanative extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state={
       text: '123',
       showHeader:'Show',
@@ -29,20 +28,20 @@ export default class Reanative extends Component {
     }
   }
   changeTirtle(state,showState){
-    console.log(state,showState);
-    this.setState({tirtle:state});
+    console.log(state,showState)
+    this.setState({tirtle:state})
     this.setState({showHeader:showState})
   }
   toMessage(navigator){
     navigator.push({id:"Message",title:"Message",data:"goto Message"});
   }
   login(){
-    console.log('do log');
+    console.log('do log')
     this.setState({isLogin:true})
   }
   render() {
-    let o=this;
-    let Tirtle=this.state.tirtle;
+    let o=this
+    let Tirtle=this.state.tirtle
     let NavigationBarRouteMapper = {
       LeftButton: function(route, navigator, index, navState) {
         if (route.id === 'main') {
@@ -65,7 +64,7 @@ export default class Reanative extends Component {
         }
       },
       Title: function(route, navigator, index, navState) {
-        let theTirtle='';
+        let theTirtle=''
         if(index>0){
           theTirtle=route.title
         }else{
@@ -78,13 +77,13 @@ export default class Reanative extends Component {
         );
       },
     };
-    let nav;
+    let nav
     if(this.state.showHeader=='Show'){
       nav=(<Navigator.NavigationBar routeMapper={NavigationBarRouteMapper} style={styles.navBar} />)
     }else{
       nav=null
     }
-    let resultcom;
+    let resultcom
     if(o.state.isLogin){
       resultcom=(<View style={{flex:1}}>
       <Navigator style={{flex:1}}
@@ -96,7 +95,7 @@ export default class Reanative extends Component {
              navigationBar={nav}/>
       </View>)
     }else{
-      resultcom=(<Login navigator={this.props.nav} dologin={o.login.bind(o)} data={this.props.data} title="Login" />)
+      resultcom=(<Login navigator={this.props.nav} dologin={o.login.bind(o)} data={this.props.data} title="Login"/ >)
     }
     return (
       resultcom
@@ -106,5 +105,5 @@ export default class Reanative extends Component {
 }
 
 
-Expo.registerRootComponent(Reanative);
-//AppRegistry.registerComponent('Reanative', () => Reanative);
+
+AppRegistry.registerComponent('Reanative', () => Reanative);

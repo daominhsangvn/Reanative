@@ -37,6 +37,3 @@ code with react native
 <img width='30%' src="http://47.88.2.72:2016/getphotoPal/2017-3-20/14899820148129.png">
 </div>
 
-### Trouble Shooting
-
-`$ rnpm link react-native-video`
